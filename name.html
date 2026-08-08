@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postal Wiki - 夺命邮差/喋血街头 中文百科</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #e94560;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            color: #e94560;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            color: #aaa;
+            margin-top: 10px;
+        }
+        
+        .notice {
+            background: #16213e;
+            border-left: 4px solid #e94560;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .nav-item {
+            background: #16213e;
+            border: 1px solid #0f3460;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #eee;
+            transition: all 0.3s;
+        }
+        
+        .nav-item:hover {
+            background: #0f3460;
+            border-color: #e94560;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+        }
+        
+        .nav-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .nav-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #e94560;
+        }
+        
+        .nav-desc {
+            font-size: 0.85em;
+            color: #aaa;
+            margin-top: 5px;
+        }
+        
+        .section {
+            background: #16213e;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #e94560;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #0f3460;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #0f3460;
+        }
+        
+        th {
+            color: #e94560;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: #0f3460;
+        }
+        
+        a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .featured {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .featured-icon {
+            font-size: 4em;
+        }
+        
+        .featured-content h3 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #aaa;
+            border-left: 3px solid #e94560;
+            padding-left: 15px;
+            margin: 10px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            border-top: 1px solid #0f3460;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📮 Postal Wiki</h1>
+            <p class="subtitle">夺命邮差 / 喋血街头 系列中文百科</p>
+        </header>
+        
+        <div class="notice">
+            <strong>ℹ️ 关于本站</strong><br>
+            本站由玩家社区维护，与 Running With Scissors 官方无直接关联。
+        </div>
+        
+        <div class="nav-grid">
+            <a href="#games" class="nav-item">
+                <div class="nav-icon">🎮</div>
+                <div class="nav-title">游戏</div>
+                <div class="nav-desc">系列作品</div>
+            </a>
+            <a href="#characters" class="nav-item">
+                <div class="nav-icon">👤</div>
+                <div class="nav-title">角色</div>
+                <div class="nav-desc">登场人物</div>
+            </a>
+            <a href="#weapons" class="nav-item">
+                <div class="nav-icon">🔫</div>
+                <div class="nav-title">武器</div>
+                <div class="nav-desc">武器装备</div>
+            </a>
+            <a href="#story" class="nav-item">
+                <div class="nav-icon">📖</div>
+                <div class="nav-title">剧情</div>
+                <div class="nav-desc">故事线</div>
+            </a>
+            <a href="#locations" class="nav-item">
+                <div class="nav-icon">🌍</div>
+                <div class="nav-title">地点</div>
+                <div class="nav-desc">游戏场景</div>
+            </a>
+            <a href="#achievements" class="nav-item">
+                <div class="nav-icon">🏆</div>
+                <div class="nav-title">成就</div>
+                <div class="nav-desc">游戏成就</div>
+            </a>
+            <a href="#quotes" class="nav-item">
+                <div class="nav-icon">💬</div>
+                <div class="nav-title">台词</div>
+                <div class="nav-desc">经典语录</div>
+            </a>
+            <a href="#media" class="nav-item">
+                <div class="nav-icon">🎬</div>
+                <div class="nav-title">媒体</div>
+                <div class="nav-desc">视频音乐</div>
+            </a>
+            <a href="#mods" class="nav-item">
+                <div class="nav-icon">🛠️</div>
+                <div class="nav-title">模组</div>
+                <div class="nav-desc">玩家模组</div>
+            </a>
+            <a href="#cut" class="nav-item">
+                <div class="nav-icon">✂️</div>
+                <div class="nav-title">删减内容</div>
+                <div class="nav-desc">被删内容</div>
+            </a>
+        </div>
+        
+        <div class="section" id="games">
+            <h2>📮 正作</h2>
+            <table>
+                <tr>
+                    <th>封面</th>
+                    <th>游戏</th>
+                    <th>年份</th>
+                    <th>平台</th>
+                </tr>
+                <tr>
+                    <td>📮</td>
+                    <td><a href="#">Postal</a></td>
+                    <td>1997</td>
+                    <td>PC, Mac, Linux</td>
+                </tr>
+                <tr>
+                    <td>📮+</td>
+                    <td><a href="#">Postal: Special Delivery</a></td>
+                    <td>1998</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>📮★</td>
+                    <td><a href="#">Postal Super / スーパーポスタル</a></td>
+                    <td>2003</td>
+                    <td>PS2 (日本独占)</td>
+                </tr>
+                <tr>
+                    <td>📮C</td>
+                    <td><a href="#">Postal Classic and Uncut</a></td>
+                    <td>2003</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>📮²</td>
+                    <td><a href="#">Postal 2</a></td>
+                    <td>2003</td>
+                    <td>PC, Mac, Linux</td>
+                </tr>
+                <tr>
+                    <td>📮²+</td>
+                    <td><a href="#">Postal 2: Share the Pain</a></td>
+                    <td>2003</td>
+                    <td>PC, Mac, Linux</td>
+                </tr>
+                <tr>
+                    <td>📮²AW</td>
+                    <td><a href="#">Postal 2: Apocalypse Weekend</a></td>
+                    <td>2005</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>📮²C</td>
+                    <td><a href="#">Postal 2: Complete Pack</a></td>
+                    <td>2011</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>📮²PL</td>
+                    <td><a href="#">Postal 2: Paradise Lost / ポスタル2 パラダイス・ロスト</a></td>
+                    <td>2015</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>📮³</td>
+                    <td><a href="#">Postal III</a></td>
+                    <td>2011</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>📮⁴</td>
+                    <td><a href="#">Postal 4: No Regerts</a></td>
+                    <td>2022</td>
+                    <td>PC, PS4/5, Xbox</td>
+                </tr>
+                <tr>
+                    <td>📮R</td>
+                    <td><a href="#">Postal Redux</a></td>
+                    <td>2016</td>
+                    <td>PC, PS4, Switch</td>
+                </tr>
+                <tr>
+                    <td>🧠</td>
+                    <td><a href="#">Postal: Brain Damaged</a></td>
+                    <td>2022</td>
+                    <td>PC</td>
+                </tr>
+                <tr>
+                    <td>🧠☀️</td>
+                    <td><a href="#">Postal: Brain Damaged - These Sunny Daze</a></td>
+                    <td>2023</td>
+                    <td>PC</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section" id="mods">
+            <h2>🛠️ MOD</h2>
+            <table>
+                <tr>
+                    <th>封面</th>
+                    <th>MOD</th>
+                    <th>年份</th>
+                    <th>语言</th>
+                </tr>
+                <tr>
+                    <td>🔩</td>
+                    <td><a href="#">Shtopor zhzhot / Штопор жжот</a></td>
+                    <td>2006</td>
+                    <td>🇷🇺 俄语</td>
+                </tr>
+                <tr>
+                    <td>🔩</td>
+                    <td><a href="#">From Russia with Love / ポスタル２ロシアより愛をこめて</a></td>
+                    <td>2006</td>
+                    <td>🇯🇵 日语</td>
+                </tr>
+                <tr>
+                    <td>🔩</td>
+                    <td><a href="#">Corkscrew Rules</a></td>
+                    <td>2006</td>
+                    <td>🇬🇧 英语</td>
+                </tr>
+                <tr>
+                    <td>🔩</td>
+                    <td><a href="#">Eternal Damnation / エターナルダムネーション</a></td>
+                    <td>2006</td>
+                    <td>🇯🇵 日语</td>
+                </tr>
+                <tr>
+                    <td>🎄</td>
+                    <td><a href="#">Postal 2: Christmas</a></td>
+                    <td>2004</td>
+                    <td>🇬🇧 英语</td>
+                </tr>
+                <tr>
+                    <td>🏝️</td>
+                    <td><a href="#">A Week In Paradise</a></td>
+                    <td>2005</td>
+                    <td>🇬🇧 英语</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section" id="mobile">
+            <h2>📱 衍生作品</h2>
+            <table>
+                <tr>
+                    <th>封面</th>
+                    <th>游戏</th>
+                    <th>年份</th>
+                    <th>平台</th>
+                </tr>
+                <tr>
+                    <td>📱</td>
+                    <td><a href="#">Postal Mobile</a></td>
+                    <td>2009</td>
+                    <td>iOS, Android</td>
+                </tr>
+                <tr>
+                    <td>👙</td>
+                    <td><a href="#">Postal Babes</a></td>
+                    <td>2009</td>
+                    <td>iOS, Android</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section" id="featured">
+            <h2>⭐ 今日推荐</h2>
+            <div class="featured">
+                <div class="featured-icon">👤</div>
+                <div class="featured-content">
+                    <h3>Postal Dude</h3>
+                    <div class="quote">"I regret nothing!"</div>
+                    <p>系列标志性主角，黑色皮夹克、墨镜、凌乱长发，一个被生活逼到极限的普通人。</p>
+                    <p><a href="#">了解更多 →</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🤝 参与贡献</h2>
+            <p>本站内容尚不完善，欢迎通过 GitHub 提交修改建议。</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>发现错误？提交 <a href="https://github.com/9mmarreimu/postal-wiki/issues">Issue</a></li>
+                <li>想添加内容？Fork 仓库后提交 Pull Request</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Postal Wiki © 2026 | 非官方玩家社区</p>
+            <p style="font-size: 0.85em; margin-top: 10px;">所有游戏内容版权归 Running With Scissors 所有</p>
+        </footer>
+    </div>
+</body>
+</html>
